@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap");
 
 *,
 *::before,
@@ -10,25 +10,29 @@
 
 :root {
   --searchbar-bg-color: #ebebeb;
-  --gray: #30384c;
-  --red: #FF0000;
-  --white: #FFFFFF;
+  --searchbar-placeholder-color: #30384c;
+  --red: #ff0000;
+  --white: #ffffff;
+  --input-focus-color: rgb(119, 119, 242);
+  --nav-links-color: #898989;
 }
 
 html {
   font-size: 16px;
-  font-family: 'Mulish';
+  font-family: "Mulish";
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 button {
+  font-size: 16px;
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
 }
+

@@ -1,0 +1,74 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+
+  width: 250px;
+  height: 90vh;
+
+  margin-top: 10vh;
+
+  padding-left: 2rem;
+  padding-bottom: 2.5rem;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+
+  &:hover {
+    scrollbar-color: gray transparent;
+  }
+}
+
+.pages_nav {
+  display: flex;
+  flex-direction: column;
+
+  gap: 50px;
+  padding-bottom: 3rem;
+  width: 134px;
+}
+
+.main_pages {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.other_pages {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.page_link {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  color: var(--nav-links-color);
+
+  height: 20px;
+  width: 100%;
+}
+
+.page_icon {
+  width: 20px;
+  height: 20px;
+}
+
+.subs_nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+
+  margin-bottom: 6.25rem;
+}
+
+.subs_title {
+  font-size: 18px;
+}
+
+
