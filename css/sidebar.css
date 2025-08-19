@@ -3,10 +3,10 @@
   flex-direction: column;
   position: fixed;
 
-  width: 250px;
+  width: 15.6rem;
   height: 90vh;
 
-  margin-top: 10vh;
+  margin-top: 12vh;
 
   padding-left: 2rem;
   padding-bottom: 2.5rem;
@@ -28,7 +28,7 @@
 
   gap: 50px;
   padding-bottom: 3rem;
-  width: 134px;
+  width: auto;
 }
 
 .main_pages {
@@ -48,7 +48,7 @@
   align-items: center;
   text-align: center;
   gap: 1rem;
-  color: var(--nav-links-color);
+  color: var(--link-text-gray-color);
 
   height: 20px;
   width: 100%;

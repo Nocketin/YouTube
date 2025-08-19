@@ -14,12 +14,15 @@
   --red: #ff0000;
   --white: #ffffff;
   --input-focus-color: rgb(119, 119, 242);
-  --nav-links-color: #898989;
+  --link-text-gray-color: #898989;
+  --channel-text-gray-color: #C2C2C2;
+  --black-color: #19202C;
 }
 
 html {
   font-size: 16px;
   font-family: "Mulish";
+  overflow-x: hidden;
 }
 
 a {
@@ -34,5 +37,9 @@ button {
   border: none;
   padding: 0;
   cursor: pointer;
+}
+
+body {
+    padding-top: 0.1px;
 }
 
