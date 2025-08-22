@@ -17,11 +17,31 @@
   --link-text-gray-color: #898989;
   --channel-text-gray-color: #c2c2c2;
   --black-color: #19202c;
+  --text-color: #19202c;
+  --body-bg: #ffffff;
+  --icon-color: #000000;
+  --circle-effect-color: rgba(0, 0, 0, 0.1);
+}
+
+:root[data-theme="dark"] {
+  --searchbar-bg-color: #2b2b2b;
+  --searchbar-placeholder-color: #cccccc;
+  --red: #ff4d4d;
+  --white: #121212;
+  --input-focus-color: rgb(119, 119, 242);
+  --link-text-gray-color: #aaaaaa;
+  --channel-text-gray-color: #777777;
+  --black-color: #f0f0f0;
+  --body-bg: #121212;
+  --text-color: #f0f0f0;
+  --icon-color: #ffffff;
+  --circle-effect-color: rgba(135, 135, 135, 0.1);
 }
 
 html {
   font-size: 16px;
   font-family: "Mulish";
+
   overflow-x: hidden;
 }
 
@@ -40,7 +60,9 @@ button {
 }
 
 body {
+  background-color: var(--body-bg);
   padding-top: 0.1px;
+  color: var(--text-color);
 }
 
 ul,
@@ -66,12 +88,11 @@ li {
 
   &:hover,
   &:focus-visible {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--circle-effect-color);
     outline: none;
   }
 
   &:active {
-    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 8px var(--circle-effect-color);
   }
 }
-

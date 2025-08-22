@@ -1,18 +1,30 @@
 main {
-  width: 82%;
+  width: 85vw;
 
   display: flex;
   flex-direction: column;
 
   margin-left: 15%;
-  margin-top: 10vh;
+  margin-top: 5rem;
+
+  padding-right: 4vw;
+  padding-left: 1rem;
+
+  background-color: var(--body-bg);
 }
 
 .channel_banner {
   width: 100%;
-  height: auto;
+  height: 17.5rem;
 
-  margin-bottom: 2rem;
+  background-image: url(/assets/img/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  border-radius: 10px;
+  
+
+  color: var(--black-color);
 }
 
 .channel_section {
@@ -33,6 +45,10 @@ main {
   justify-content: space-between;
 }
 
+.author_img {
+  border-radius: 50%;
+}
+
 .author_name-container {
   display: flex;
   flex-direction: column;
@@ -42,11 +58,15 @@ main {
   color: var(--channel-text-gray-color);
 }
 
+.channel_notification_button {
+  color: var(--icon-color);
+}
 .channel_subscribe {
   height: 40px;
   gap: 1.25rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .subscribe_button {
@@ -57,6 +77,16 @@ main {
   height: 40px;
 
   border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: #c20000;
+  }
+
+  &:active {
+    background-color: #a80000;
+    transform: scale(0.97);
+  }
 }
 
 .channel_content_container {
@@ -65,6 +95,24 @@ main {
   position: relative;
 
   margin-bottom: 3.8rem;
+}
+
+.mobile_channel_navigation {
+  display: none;
+  align-items: center;
+  position: sticky;
+  z-index: 5;
+
+  background-color: var(--white);
+
+  justify-content: space-around;
+
+  font-size: 18px;
+
+  top: 4rem;
+  width: 100vw;
+
+  margin-top: 100px;
 }
 
 .channel_navigation {
@@ -81,7 +129,7 @@ main {
   font-size: 18px;
 
   top: 4rem;
-  width: 800%;
+  width: 85vw;
 }
 
 .channel_nav-link {
@@ -93,7 +141,7 @@ main {
 .recommended_channels {
   position: absolute;
   top: -60px;
-  right: 90px;
+  right: 8%;
 
   display: flex;
   flex-direction: column;
@@ -123,14 +171,12 @@ main {
 
   border-radius: 8px;
 
-  
-    
   &:hover {
     background-color: rgba(0, 0, 0, 0.08);
   }
 
-   &:active {
-    background-color: rgba(0, 0, 0, 0.2); 
+  &:active {
+    background-color: rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -142,28 +188,31 @@ main {
   display: flex;
 
   gap: 2rem;
-  width: 70%;
-  padding: 10px;
+  width: 75%;
+  height: 15.6rem;
+
+  padding: 5px;
   border-radius: 8px;
 
-   &:hover {
-    background-color: rgba(0, 0, 0, 0.08); 
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.08);
   }
 
   &:active {
-    background-color: rgba(0, 0, 0, 0.16); 
-    transform: scale(0.98); 
+    background-color: rgba(0, 0, 0, 0.16);
+    transform: scale(0.98);
   }
 }
 
 .recommended_video_img {
   border-radius: 10px;
 }
+
 .recommended_video_text {
   display: flex;
   flex-direction: column;
 
-  padding-top: 1rem;
+  padding-top: 0.5rem;
 }
 
 .recommended_video_title {
@@ -174,7 +223,9 @@ main {
 .video_description {
   width: 100%;
   opacity: 60%;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+
+  overflow: hidden;
 }
 
 .video_info {
@@ -195,19 +246,18 @@ main {
 }
 
 .videos_navigation_arrow {
-  
-  &:hover .arrow{
-    background-color: rgba(0, 0, 0, 0.08); /* лёгкое затемнение при наведении */
+  &:hover .arrow {
+    background-color: rgba(0, 0, 0, 0.08);
   }
 
-  &:active .arrow{
-    background-color: rgba(0, 0, 0, 0.16); /* более сильное затемнение при клике */
-    transform: scale(0.95); /* эффект нажатия */
+  &:active .arrow {
+    background-color: rgba(0, 0, 0, 0.16);
+    transform: scale(0.95);
   }
 }
 
-.arrow{
-  border-radius: 40px ;
+.arrow {
+  border-radius: 40px;
 }
 .videos_list {
   display: flex;
@@ -224,18 +274,18 @@ main {
 
   width: 15.6rem;
 
-    &:hover {
-    background-color: rgba(0, 0, 0, 0.08); 
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.08);
   }
 
   &:active {
-    background-color: rgba(0, 0, 0, 0.16); 
-    transform: scale(0.98); 
+    background-color: rgba(0, 0, 0, 0.16);
+    transform: scale(0.98);
   }
 }
 
 .video_preview_img {
-  border-radius: 10px;
+  border-radius: 14px;
 }
 
 .time {
@@ -249,7 +299,7 @@ main {
   border-radius: 12px;
 
   background-color: rgba(0, 0, 0, 0.3);
-  color: var(--white);
+  color: white;
 
   font-size: 14px;
 
@@ -260,6 +310,9 @@ main {
 }
 
 .video_list_item_info {
+  display: flex;
+  justify-content: space-between;
+  white-space: pre;
   font-size: 13px;
   color: var(--channel-text-gray-color);
 }
@@ -268,4 +321,119 @@ main {
   border-bottom: 2px solid var(--red);
   color: var(--red);
   font-weight: bold;
+}
+
+@media (max-width: 1500px) {
+  .recommended_channels {
+    right: 2%;
+  }
+}
+
+@media (max-width: 1280px) {
+  main {
+    width: 100%;
+    margin-left: 0;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .recommended_video {
+    width: 100%;
+  }
+  .recommended_channels {
+    display: none;
+  }
+  .channel_navigation {
+    width: 100%;
+
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .channel_banner {
+    height: 12rem;
+  }
+}
+
+@media (max-width: 767px) {
+  main {
+    width: 100%;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 4rem;
+  }
+
+  .channel_banner {
+    height: 6rem;
+
+    background-position: center;
+    background-size: cover;
+
+    border-radius: 0;
+    margin-bottom: 0;
+
+    position: absolute;
+  }
+
+  .channel_header {
+    flex-direction: column;
+
+    padding-left: 1rem;
+
+    position: relative;
+    top: 3.5rem;
+
+    height: 12rem;
+
+    gap: 2.25rem;
+  }
+
+  .channel_author {
+    flex-direction: column;
+    align-items: start;
+
+    height: auto;
+  }
+
+  .author_name-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .channel_notification_button {
+    display: none;
+  }
+
+  .mobile_channel_navigation {
+    display: flex;
+  }
+
+  .channel_navigation {
+    display: none;
+  }
+
+  .channel_content_container {
+    display: none;
+  }
+
+  .videos_list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video_list_item {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    padding: 5px;
+    border-radius: 8px;
+
+    width: 90%;
+  }
+  .videos_container_header {
+    display: none;
+  }
 }

@@ -3,10 +3,10 @@
   flex-direction: column;
   position: fixed;
 
-  width: 15.6rem;
+  width: 15vw;
   height: 90vh;
 
-  margin-top: 12vh;
+  margin-top: 5rem;
 
   padding-left: 1rem;
   padding-bottom: 2.5rem;
@@ -17,6 +17,7 @@
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
 
+  background-color: var(--body-bg);
   &:hover {
     scrollbar-color: gray transparent;
   }
@@ -57,13 +58,12 @@
 
   transition: background-color 0.2s;
 
-  
   &:hover {
     background-color: rgba(0, 0, 0, 0.08);
   }
 
-   &:active {
-    background-color: rgba(0, 0, 0, 0.2); /* затемнение при нажатии */
+  &:active {
+    background-color: rgba(0, 0, 0, 0.2); 
   }
 }
 
@@ -95,9 +95,63 @@
 }
 
 .settings_button {
-  min-height: 3rem; 
+  min-height: 3rem;
+
+  color: var(--black_color);
 }
 
 .active_sidebar_link {
   color: var(--red);
+}
+
+.mobile_menu {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .mobile_menu {
+    display: flex;
+    position: fixed;
+
+    bottom: 0px;
+    z-index: 10;
+
+    width: 100%;
+    height: 4rem;
+
+    background-color: var(--white);
+    border-top: 2px solid #f1f1f1;
+  }
+
+  .pages_nav {
+    padding-bottom: 0;
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .main_pages {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .page_link {
+    flex-direction: column;
+    gap: 0;
+
+    padding-left: 0;
+
+    color: var(--link-text-gray-color);
+
+    height: 3rem;
+    width: auto;
+
+    transition: background-color 0.2s;
+  }
 }
