@@ -22,7 +22,6 @@ main {
   background-size: contain;
 
   border-radius: 10px;
-  
 
   color: var(--black-color);
 }
@@ -232,10 +231,13 @@ main {
   color: var(--channel-text-gray-color);
 }
 
+
 .videos_container {
-  width: 100%;
+  width: 110%;
 
   margin-bottom: 2rem;
+  overflow: visible;
+  
 }
 
 .videos_container_header {
@@ -243,6 +245,7 @@ main {
   justify-content: space-between;
 
   margin-bottom: 2rem;
+  padding-right: 10%;
 }
 
 .videos_navigation_arrow {
@@ -259,9 +262,22 @@ main {
 .arrow {
   border-radius: 40px;
 }
+
+
 .videos_list {
   display: flex;
+
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+
   gap: 2rem;
+}
+
+.empty_space {
+color: transparent;
+background-color: transparent;
+width: 120px;
 }
 
 .video_list_item {

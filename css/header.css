@@ -7,7 +7,7 @@
 
   position: fixed;
 
-  padding-left: 2rem;
+  padding-left: 1rem;
   padding-top: 1rem;
 
   z-index: 10;
@@ -44,7 +44,7 @@
   white-space: nowrap;
   width: auto;
   gap: 5px;
-  margin-right: 2rem;
+  margin-right: 4rem;
 }
 
 .header_container {
